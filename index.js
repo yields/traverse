@@ -25,6 +25,7 @@ module.exports = function(type, el, selector, len){
     if (n == ret.length) break;
     if (1 != el.nodeType) continue;
     if (matches(el, selector)) ret.push(el);
+    if (!selector) ret.push(el);
   } while (el = el[type]);
 
   return ret;

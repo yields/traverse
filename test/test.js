@@ -26,23 +26,23 @@ describe('traverse', function(){
   describe('traverse("previousSibling", el, "*", Infinity)', function(){
     it('should get all previous els with length of 7', function(){
       var el = tests[0].querySelector('.one');
-      var els = traverse('previousSibling', el, '*', Infinity);
+      var els = traverse('previousSibling', el, null, Infinity);
       assert(7 == els.length);
     })
   })
 
-  describe('traverse("previousSibling", el, "*", 1)', function(){
+  describe('traverse("previousSibling", el, null,  1)', function(){
     it('should get a single previous el', function(){
       var el = tests[0].querySelector('.one');
-      var els = traverse('previousSibling', el, '*', 1);
+      var els = traverse('previousSibling', el, null, 1);
       assert(1 == els.length);
     })
   })
 
-  describe('traverse("parentNode", el, "*", Infinity)', function(){
+  describe('traverse("parentNode", el, null, Infinity)', function(){
     it('should get all parents', function(){
       var el = tests[0].querySelector('.one');
-      var els = traverse('parentNode', el, '*', Infinity);
+      var els = traverse('parentNode', el, null, Infinity);
       assert(3 == els.length);
     })
   })

@@ -11,7 +11,7 @@
 
 ## API
 
-#### traverse(property, element, selector[, length])
+#### traverse(property, element, [selector, [length]])
 
 Traverse using the given `property` on `element` getting elements
 that match the given `selector` until `len` is reached.
