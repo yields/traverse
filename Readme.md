@@ -16,6 +16,7 @@
 Traverse using the given `property` on `element` getting elements
 that match the given `selector` until `len` is reached.
 
+if `selector` is omitted, all elements are returned.
 `len` is defaulted to 1.
 
 ## Example
