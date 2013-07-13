@@ -2,6 +2,7 @@
 describe('traverse', function(){
 
   var tests = document.querySelectorAll('div:nth-child(1n+2)')
+    , html = document.head.parentNode
     , traverse = require('traverse')
     , assert = require('assert');
 
@@ -53,6 +54,12 @@ describe('traverse', function(){
       var els = traverse('parentNode', el, 'body', 1);
       assert(document.body == els[0]);
       assert(1 == els.length);
+    })
+  })
+
+  describe('traverse("parentNode", html)', function(){
+    it('should return an empty array', function(){
+      assert(0 == traverse('parentNode', html));
     })
   })
 
