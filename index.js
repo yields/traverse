@@ -21,6 +21,8 @@ module.exports = function(type, el, selector, len){
     , n = len || 1
     , ret = [];
 
+  if (!el) return ret;
+
   do {
     if (n == ret.length) break;
     if (1 != el.nodeType) continue;

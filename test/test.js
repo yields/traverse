@@ -7,6 +7,10 @@ describe('traverse', function(){
     , assert = require('assert');
 
   describe('traverse("nextSibling", el, "div", Infinity)', function(){
+    it('should not error when theres no nextSibling', function(){
+      var el = document.createElement('div');
+      assert(0 == traverse('nextSibling', el).length);
+    })
     it('should get all next divs with length of 5', function(){
       var el = tests[0].querySelector('.one');
       var els = traverse('nextSibling', el, 'div', Infinity);
