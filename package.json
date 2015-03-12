@@ -1,0 +1,23 @@
+{
+  "name": "yields-traverse",
+  "version": "0.1.1",
+  "description": "low level traverse function, inspired by $.dir.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yields/traverse.git"
+  },
+  "keywords": [
+    "traverse",
+    "dir"
+  ],
+  "author": "Amir Abu Shareb <yields@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yields/traverse/issues"
+  },
+  "homepage": "https://github.com/yields/traverse",
+  "dependencies": {
+    "matches-selector": "*"
+  }
+}
