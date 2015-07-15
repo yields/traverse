@@ -11,7 +11,7 @@
 
 ## API
 
-#### traverse(property, element, [selector, [length]])
+#### traverse(property, element, [selector|element, [length]])
 
 Traverse using the given `property` on `element` getting elements
 that match the given `selector` until `len` is reached.
@@ -31,6 +31,10 @@ traverse('parentNode', el, 'p', Infinity);
 // getting a single `<p>` sibling
 
 traverse('nextSibling', el, 'p');
+
+// traversing to an element
+
+traverse('parentNode', el, document.body);
 ```
 
 ## License
