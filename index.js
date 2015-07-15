@@ -10,7 +10,7 @@ var matches = require('matches-selector');
  *
  * @param {String} type
  * @param {Element} el
- * @param {String} selector
+ * @param {String|Element} selector
  * @param {Number} len
  * @return {Array}
  * @api public
@@ -23,10 +23,14 @@ module.exports = function(type, el, selector, len){
 
   if (!el) return ret;
 
+  // check if `selector` is a DOM node
+  var isElement = selector && selector.nodeName;
+
   do {
     if (n == ret.length) break;
     if (1 != el.nodeType) continue;
-    if (matches(el, selector)) ret.push(el);
+    if (isElement) el == selector && ret.push(el);
+    else if (matches(el, selector)) ret.push(el);
     if (!selector) ret.push(el);
   } while (el = el[type]);
 
