@@ -67,7 +67,14 @@ describe('traverse', function(){
     })
   })
 
-
+  describe('traverse("parentNode", el, document.body)', function() {
+    it('should also work with elements', function() {
+      var el = tests[0].querySelector('.one');
+      var els = traverse('parentNode', el, document.body);
+      assert(document.body == els[0]);
+      assert(1 == els.length);
+    })
+  })
 
   function assertall(type, els){
     for (var i = 0; i < els.length; ++i) {
