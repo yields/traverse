@@ -1,4 +1,11 @@
 
+0.2.0 / 2015-07-16
+==================
+
+  * update readme
+  * support elements as a selector
+  * add `package.json` file
+
 0.1.1 / 2013-07-31
 ==================
 
